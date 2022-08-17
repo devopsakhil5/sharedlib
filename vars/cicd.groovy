@@ -1,4 +1,4 @@
 def down(repo)
 {
- git "repo"
+ git "${repo}"
 }
