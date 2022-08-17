@@ -15,3 +15,9 @@ def deploy(jobname, ip, appname)
 {
  sh "scp /home/ubuntu/.jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}"
 }
+
+
+def test(jobname)
+{
+ sh "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar"
+}
