@@ -21,3 +21,8 @@ def test(jobname)
 {
  sh "java -jar /home/ubuntu/.jenkins/workspace/${jobname}/testing.jar"
 }
+
+def mail(body, subject, email)
+{
+ mail bcc: '', body: "${body}", cc: '', from: '', replyTo: '', subject: "${subject}", to: "${email}"
+}
